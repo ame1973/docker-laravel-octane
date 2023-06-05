@@ -25,12 +25,6 @@ RUN apt-get update && \
         default-mysql-client \
         unzip
 
-# Install nodejs 18.x
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
-RUN apt-get install -y nodejs
-
-RUN npm install -g pnpm
-
 RUN docker-php-ext-install mysqli pdo_mysql exif pcntl zip bcmath intl gmp
 
 RUN rm -rf /etc/supervisor/service.d/swoole.conf
