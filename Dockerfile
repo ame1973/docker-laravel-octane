@@ -1,7 +1,5 @@
 FROM phpswoole/swoole:php8.1
 
-COPY ./rootfilesystem/ /
-
 RUN apt-get update && \
     apt-get install -y --force-yes --no-install-recommends \
         libonig-dev \
@@ -32,3 +30,5 @@ RUN rm -rf /etc/supervisor/service.d/swoole.conf
 RUN rm -rf /var/www
 
 WORKDIR /app
+
+CMD []
