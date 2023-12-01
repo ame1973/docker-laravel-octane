@@ -1,4 +1,4 @@
-FROM phpswoole/swoole:php8.1
+FROM phpswoole/swoole:5.1.1-php8.1
 
 RUN apt-get update && \
     apt-get install -y --force-yes --no-install-recommends \
@@ -24,6 +24,9 @@ RUN apt-get update && \
         unzip
 
 RUN docker-php-ext-install mysqli pdo_mysql exif pcntl zip bcmath intl gmp
+
+# install php-xlswriter
+RUN pecl install xlswriter && docker-php-ext-enable xlswriter
 
 RUN rm -rf /etc/supervisor/service.d/swoole.conf
 
