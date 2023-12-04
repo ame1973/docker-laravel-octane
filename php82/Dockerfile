@@ -25,9 +25,6 @@ RUN apt-get update && \
 
 RUN docker-php-ext-install mysqli pdo_mysql exif pcntl zip bcmath intl gmp
 
-# install php-xlswriter
-RUN pecl install xlswriter && docker-php-ext-enable xlswriter
-
 RUN rm -rf /etc/supervisor/service.d/swoole.conf
 
 RUN rm -rf /var/www

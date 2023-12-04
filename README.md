@@ -2,7 +2,7 @@
 
 base phpswoole/swoole:php8.2 image
 
-include: php8.2, swoole, composer2, supervisor, cron, nodejs 18, npm, pnpm, mysql, redis, xlswriter
+include: php8.2, swoole, composer2, supervisor, cron, nodejs 18, npm, pnpm, mysql, redis
 
 workdir `/app`
 
