@@ -1,8 +1,10 @@
 # docker-laravel-octane
 
-base phpswoole/swoole:php8.2 image
+base phpswoole/swoole image
 
-include: php8.2, swoole, composer2, supervisor, cron, nodejs 18, npm, pnpm, mysql, redis
+include: swoole, composer2, supervisor, cron, nodejs 18, npm, pnpm, mysql, redis
+
+php version： 8.1, 8.2, 8.3 
 
 workdir `/app`
 
@@ -17,5 +19,14 @@ RUN echo "* * * * * cd /app && php artisan schedule:run >> /dev/null 2>&1" >> /v
 ## Build
 
 ```shell
-docker buildx build --platform linux/arm64 -t ame1973/swoole-octane:latest -t ame1973/swoole-octane:php8.2 . --push
+./build.sh
 ```
+
+or
+
+```shell
+cd php8.2
+
+docker buildx build --platform linux/arm64 -t ame1973/swoole-octane:php8.2 . --push
+```
+
