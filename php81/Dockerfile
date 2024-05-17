@@ -23,7 +23,7 @@ RUN apt-get update && \
         default-mysql-client \
         unzip
 
-RUN docker-php-ext-install mysqli pdo_mysql exif pcntl zip bcmath intl gmp
+RUN docker-php-ext-install mysqli pdo_mysql exif pcntl zip bcmath intl gmp gd
 
 RUN rm -rf /etc/supervisor/service.d/swoole.conf
 
