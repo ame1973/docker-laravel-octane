@@ -27,6 +27,6 @@ or
 ```shell
 cd php8.2
 
-docker buildx build --platform linux/arm64 -t ame1973/swoole-octane:php8.2 . --push
+docker buildx build --platform linux/arm64 -t nftiv/swoole-octane:php8.2 . --push
 ```
 
