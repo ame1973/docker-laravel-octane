@@ -1,4 +1,4 @@
-FROM phpswoole/swoole:5.1.1-php8.2-alpine
+FROM phpswoole/swoole:5.1.3-php8.2-alpine
 
 RUN apk update
 

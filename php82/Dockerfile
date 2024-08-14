@@ -1,4 +1,4 @@
-FROM phpswoole/swoole:5.1.1-php8.2
+FROM phpswoole/swoole:5.1.3-php8.2
 
 RUN apt-get update && \
     apt-get install -y --force-yes --no-install-recommends \

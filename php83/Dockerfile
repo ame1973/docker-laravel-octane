@@ -1,4 +1,4 @@
-FROM phpswoole/swoole:5.1.2-php8.3
+FROM phpswoole/swoole:5.1.3-php8.3
 
 RUN apt-get update && \
     apt-get install -y --force-yes --no-install-recommends \
@@ -24,6 +24,8 @@ RUN apt-get update && \
         unzip
 
 RUN docker-php-ext-install mysqli pdo_mysql exif pcntl zip bcmath intl gmp gd
+
+COPY ./rootfilesystem/ /
 
 RUN rm -rf /etc/supervisor/service.d/swoole.conf
 
