@@ -4,7 +4,7 @@ base phpswoole/swoole image
 
 include: swoole, composer2, supervisor, cron, npm, pnpm, mysql, redis
 
-php version： 8.1, 8.2, 8.3 
+php version： 8.1, 8.2, 8.3, 8.4
 
 workdir `/app`
 

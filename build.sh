@@ -23,3 +23,8 @@ docker buildx build --platform linux/arm64 -t ame1973/swoole-octane:php8.2-alpin
 cd ../
 cd ./php83
 docker buildx build --platform linux/arm64 -t ame1973/swoole-octane:php8.3 . --push
+
+# build php 8.4
+cd ../
+cd ./php84
+docker buildx build --platform linux/arm64 -t ame1973/swoole-octane:php8.4 . --push
