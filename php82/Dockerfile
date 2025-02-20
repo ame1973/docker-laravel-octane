@@ -1,6 +1,7 @@
-FROM phpswoole/swoole:5.1.3-php8.2
+FROM phpswoole/swoole:5.1.7-php8.2
 
 RUN apt-get update && \
+    apt-get upgrade -y && \ 
     apt-get install -y --force-yes --no-install-recommends \
         libonig-dev \
         libmemcached-dev \

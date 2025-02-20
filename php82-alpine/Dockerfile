@@ -1,6 +1,6 @@
-FROM phpswoole/swoole:5.1.3-php8.2-alpine
+FROM phpswoole/swoole:5.1.7-php8.2-alpine
 
-RUN apk update
+RUN apk update && apk upgrade
 
 # install extensions
 RUN apk add libintl icu icu-dev libxml2-dev libzip-dev \

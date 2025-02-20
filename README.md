@@ -2,7 +2,7 @@
 
 base phpswoole/swoole image
 
-include: swoole, composer2, supervisor, cron, nodejs 18, npm, pnpm, mysql, redis
+include: swoole, composer2, supervisor, cron, npm, pnpm, mysql, redis
 
 php version： 8.1, 8.2, 8.3 
 
@@ -25,8 +25,8 @@ RUN echo "* * * * * cd /app && php artisan schedule:run >> /dev/null 2>&1" >> /v
 or
 
 ```shell
-cd php8.2
+cd php83
 
-docker buildx build --platform linux/arm64 -t nftiv/swoole-octane:php8.2 . --push
+docker buildx build --platform linux/arm64 -t ame1973/swoole-octane:php8.3 . --push
 ```
 

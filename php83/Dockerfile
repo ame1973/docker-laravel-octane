@@ -1,6 +1,7 @@
-FROM phpswoole/swoole:5.1.3-php8.3
+FROM phpswoole/swoole:5.1.7-php8.3
 
 RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y --force-yes --no-install-recommends \
         libonig-dev \
         libmemcached-dev \
@@ -21,7 +22,9 @@ RUN apt-get update && \
         libgmp-dev \
         #mariadb-client \
         default-mysql-client \
-        unzip
+        unzip && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install mysqli pdo_mysql exif pcntl zip bcmath intl gmp gd
 

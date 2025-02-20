@@ -1,6 +1,6 @@
-FROM phpswoole/swoole:5.1.1-php8.1-alpine
+FROM phpswoole/swoole:5.1.7-php8.1-alpine
 
-RUN apk update
+RUN apk update && apk upgrade
 
 RUN docker-php-ext-install exif pcntl
 
